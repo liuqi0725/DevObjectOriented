@@ -11,7 +11,7 @@
 # -------------------------------------------------------------------------------
 
 import sys
-from chapter2.notebook import Notebook
+from chapters.chapter2.notebook import Notebook
 
 class Menu:
 

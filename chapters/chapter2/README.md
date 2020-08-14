@@ -8,7 +8,7 @@ class FirstClass:
     pass
 ```
     
-### 对象的 __init__说明
+### class `__init__` 函数说明
 
 ```python
 class FirstClass:

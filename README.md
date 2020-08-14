@@ -14,24 +14,24 @@
     
     + 主要讲解 UML，讲的也简单，有兴趣的可以自己网上找资料看。 
 
-2. [Chapter_2 ----------- Python 对象](https://github.com/liuqi0725/DevObjectOriented/chapters/chapter2)
+2. [Chapter_2 ----------- Python 对象](https://github.com/liuqi0725/DevObjectOriented/tree/master/chapters/chapter2)
 
     1. 对象的定义及命名
     2. class `__init__` 函数说明
     3. ... 
     
-    [章节完整说明](https://github.com/liuqi0725/DevObjectOriented/chapters/chapter2/README.md) 
+    [章节完整说明](https://github.com/liuqi0725/DevObjectOriented/blob/master/chapters/chapter2/README.md) 
     
-3. [Chapter_3 ----------- 当对象是相似的](https://github.com/liuqi0725/DevObjectOriented/chapters/chapter3)
+3. [Chapter_3 ----------- 当对象是相似的](https://github.com/liuqi0725/DevObjectOriented/tree/master/chapters/chapter3)
 
     1. 待更新
 
-    [章节完整说明](https://github.com/liuqi0725/DevObjectOriented/chapters/chapter3/README.md) 
+    [章节完整说明](https://github.com/liuqi0725/DevObjectOriented/blob/master/chapters/chapter3/README.md) 
     
-4. [Chapter_4 ----------- 异常处理](https://github.com/liuqi0725/DevObjectOriented/chapters/chapter4)
+4. [Chapter_4 ----------- 异常处理](https://github.com/liuqi0725/DevObjectOriented/tree/master/chapters/chapter4)
 
     1. 待更新
 
-    [章节完整说明](https://github.com/liuqi0725/DevObjectOriented/chapters/chapter4/README.md) 
+    [章节完整说明](https://github.com/liuqi0725/DevObjectOriented/blob/master/chapters/chapter4/README.md) 
     
 5. 学到这再说

@@ -1,4 +1,4 @@
-## Python3 OOP 开发学习
+## Python3 OOP 开发学习笔记
 
 > 记录学习 Dusty Phillips 编写的《Python3 面向对象编程》 内容 
 

@@ -19,21 +19,15 @@
     1. 对象的定义及命名
     2. class `__init__` 函数说明
     3. ... 
-    
-    [章节完整说明](https://github.com/liuqi0725/DevObjectOriented/blob/master/chapters/chapter2/README.md) 
-    
+        
 3. [Chapter_3 ----------- 当对象是相似的](https://github.com/liuqi0725/DevObjectOriented/tree/master/chapters/chapter3)
 
     1. 普通继承
     2. 多继承
     3. ...
-
-    [章节完整说明](https://github.com/liuqi0725/DevObjectOriented/blob/master/chapters/chapter3/README.md) 
     
 4. [Chapter_4 ----------- 异常处理](https://github.com/liuqi0725/DevObjectOriented/tree/master/chapters/chapter4)
 
     1. 待更新
-
-    [章节完整说明](https://github.com/liuqi0725/DevObjectOriented/blob/master/chapters/chapter4/README.md) 
     
 5. 学到这再说

@@ -24,7 +24,9 @@
     
 3. [Chapter_3 ----------- 当对象是相似的](https://github.com/liuqi0725/DevObjectOriented/tree/master/chapters/chapter3)
 
-    1. 待更新
+    1. 普通继承
+    2. 多继承
+    3. ...
 
     [章节完整说明](https://github.com/liuqi0725/DevObjectOriented/blob/master/chapters/chapter3/README.md) 
     

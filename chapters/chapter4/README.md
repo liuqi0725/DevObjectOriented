@@ -35,3 +35,10 @@ finally:
 ### 自定义异常
 
 示例代码: [CustomerException.py](/chapters/chapter4/CustomerException.py)
+
+### 示例
+
+一个登陆，授权的例子
+
+示例开始程序: [main.py](/chapters/chapter4/main.py)
+

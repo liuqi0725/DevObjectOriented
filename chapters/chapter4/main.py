@@ -15,16 +15,39 @@ import chapters.chapter4.auth as auth
 class Editor:
 
     def __init__(self):
+        self.logged = False
         self.username = None
-        self.menu_map = {
+        self.default_menu_map = {
             "1": self.login,
             "2": self.add_user,
             "3": self.add_permission,
             "4": self.perm_user,
-            "5": self.test,
-            "6": self.change,
-            "7": self.quit,
+            "5": self.quit,
         }
+
+        self.logged_menu_map = {
+            "1": self.check_permission,
+            "2": self.show_user_info,
+            "3": self.logout
+        }
+
+    def show_default_menu(self):
+        print("""
+Please choice a command:
+1. 登陆
+2. 添加用户
+3. 添加权限
+4. 给用户授权
+5. 退出系统
+""")
+
+    def show_logged_menu(self):
+        print("""
+Please choice a command:
+1. 检查授权
+2. 显示用户信息
+3. 退出登录
+""")
 
     def login(self):
         username = input("username:")
@@ -36,8 +59,23 @@ class Editor:
         except auth.InvalidPassword:
             print("password was wrong")
         else:
+            self.logged = True
             self.username = username
             print("Success. Welcome back {}.".format(username))
+
+    def logout(self):
+        try:
+            auth.authenticator.logout(self.username)
+        except auth.InvalidUsername:
+            print("username does not exist!")
+        else:
+            print("Bye {}.".format(self.username))
+            self.logged = False
+            self.username = None
+
+    def show_user_info(self):
+        user = auth.authenticator.user_info(self.username)
+        print("username:{} ,is_logging:{},  password:{}".format(user.username,user.is_logged_in ,user.password))
 
     def add_user(self):
 
@@ -51,6 +89,8 @@ class Editor:
             print("username exist!")
         except auth.PasswordTooShort:
             print("password len must > 6")
+        else:
+            print("Success Add User.")
 
     def add_permission(self):
         perm_name = input("permission name:")
@@ -58,6 +98,8 @@ class Editor:
             auth.authorizor.add_permission(perm_name)
         except PermissionError as e:
             print(str(e))
+        else:
+            print("Success Add Permission {}.".format(perm_name))
 
     def perm_user(self):
         username = input("username:")
@@ -68,28 +110,28 @@ class Editor:
             print(str(e))
         except auth.InvalidUsername:
             print("username does not exist!")
+        else:
+            print("Success Add Permission {} to User {}.".format(perm_name,username))
 
-
-
-    def is_permitted(self,permission):
+    def is_permitted(self,perm_name):
         try:
-            auth.authorizor.check_permission(permission,self.username)
+            auth.authorizor.check_permission(perm_name,self.username)
         except auth.NotLoggedInError as e:
             print("{} is not logged in".format(e.username))
             return False
         except auth.NotPermittedError as e:
-            print("{} does have {}".format(e.username,permission))
+            print("{} does have {}".format(e.username,perm_name))
+            return False
+        except PermissionError as e:
+            print(str(e))
             return False
         else:
             return True
 
-    def test(self):
-        if self.is_permitted("test program"):
-            print("Testing program now...")
-
-    def change(self):
-        if self.is_permitted("change program"):
-            print("Changing program now...")
+    def check_permission(self):
+        perm_name = input("permission name:")
+        if self.is_permitted(perm_name):
+            print("user {} has permission {}".format(self.username , perm_name))
 
     def quit(self):
         # 可以用 sys 退出。
@@ -104,17 +146,20 @@ class Editor:
         try:
             answer = ""
             while True:
-                print("""
-Please choice a command:
-1. 登陆
-2. 添加用户
-3. 添加权限
-4. 给用户授权
-7. 退出
-""")
-                answer = input("Your choice:")
+                func = None
                 try:
-                    func = self.menu_map[answer]
+                    if not self.logged:
+                        self.show_default_menu()
+                    else:
+                        self.show_logged_menu()
+
+                    answer = input("Your choice:")
+
+                    if not self.logged:
+                        func = self.default_menu_map[answer]
+                    else:
+                        func = self.logged_menu_map[answer]
+
                 except KeyError:
                     print("Invalid choice [{}]".format(answer))
                 else:

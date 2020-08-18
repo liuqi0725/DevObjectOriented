@@ -118,6 +118,26 @@ class Authenticator:
         user.is_logged_in = True
         return True
 
+    def logout(self,username):
+        try:
+            user = self.users[username]
+        except KeyError:
+            raise InvalidUsername(username)
+
+        user.is_logged_in = False
+        return True
+
+    def user_info(self,username):
+        try:
+            user = self.users[username]
+        except KeyError:
+            raise InvalidUsername(username)
+
+        if not user.is_logged_in:
+            raise NotLoggedInError(username)
+
+        return user
+
     def is_logged_in(self, username):
         '''
         是否登陆

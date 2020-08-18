@@ -1,7 +1,7 @@
 ## 第三章 异常处理
 
 ### 异常如何产生
-程序中错误是不可避免的，所有的错误类 都继承自 BaseException 类。
+程序中错误是不可避免的，所有的错误类[个别错误除外 SystemExit , KeyboardInterrupt..]都继承自 Exception ,而 Exception 继承自 BaseException 类。
 程序中发生错误，会导致程序直接中断。所以需要在代码里尽可能的去捕获这些异常，保证程序的稳定。
 
 ```python

@@ -33,4 +33,15 @@
     3. 自定义异常
     4. ...
     
-5. 学到这再说
+5. [Chapter_5 ----------- 何时使用面向对象编程](https://github.com/liuqi0725/DevObjectOriented/tree/master/chapters/chapter5)
+
+    1. 待更新
+    
+6. [Chapter_6 ----------- Python数据结构](https://github.com/liuqi0725/DevObjectOriented/tree/master/chapters/chapter6)
+
+    1. 待更新
+
+7. [Chapter_7 ----------- Python里面向对象的快捷方式](https://github.com/liuqi0725/DevObjectOriented/tree/master/chapters/chapter7)
+
+    1. 待更新
+    

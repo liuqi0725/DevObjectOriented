@@ -28,6 +28,9 @@
     
 4. [Chapter_4 ----------- 异常处理](https://github.com/liuqi0725/DevObjectOriented/tree/master/chapters/chapter4)
 
-    1. 待更新
+    1. 如何导致异常发生(巴拉巴拉巴拉...)
+    2. 异常处理
+    3. 自定义异常
+    4. ...
     
 5. 学到这再说

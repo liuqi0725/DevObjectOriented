@@ -35,7 +35,10 @@
     
 5. [Chapter_5 ----------- 何时使用面向对象编程](https://github.com/liuqi0725/DevObjectOriented/tree/master/chapters/chapter5)
 
-    1. 待更新
+    1. 怎样识别一个对象（理论）
+    2. 论"数据"与"行为"
+    3. 通过property 把数据包装在行为中
+    4. ...
     
 6. [Chapter_6 ----------- Python数据结构](https://github.com/liuqi0725/DevObjectOriented/tree/master/chapters/chapter6)
 
